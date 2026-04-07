@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicólogo Marcos Martínez – Montevideo, Uruguay</title>
+    <meta name="description" content="Psicólogo Marcos Martínez. Psicotango, Psicología Transpersonal, Ludopatía, Ansiedad y Estrés en Montevideo, Uruguay.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="nav-logo">
+                <img src="img/logo.png" alt="Psicólogo Marcos Martínez Logo">
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero" id="inicio">
+        <div class="hero-content reveal">
+            <h1>Psicólogo <span>Marcos</span> Martínez</h1>
+            <p class="hero-slogan">Supera el miedo y descubre los beneficios de la terapia.<br>Tu bienestar mental es importante.</p>
+            <a href="#contacto" class="btn-primary">Reservá tu consulta</a>
+        </div>
+        <div class="hero-image reveal">
+            <img src="img/fotoInicio.jpg" alt="Psicólogo Marcos Martínez">
+        </div>
+    </section>
+
+    <!-- ======================== SERVICIOS ======================== -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Servicios</h2>
+                <p>Un espacio seguro para tu bienestar emocional</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card reveal" data-service="psicotango">
+                    <div class="service-icon"><i class="fa-solid fa-music"></i></div>
+                    <h3>Psicotango</h3>
+                    <p class="service-short">El tango como herramienta terapéutica para trabajar vínculos, comunicación y autoconciencia corporal.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="service-card reveal" data-service="transpersonal">
+                    <div class="service-icon"><i class="fa-solid fa-infinity"></i></div>
+                    <h3>Psicología Transpersonal</h3>
+                    <p class="service-short">Integra dimensiones espirituales y trascendentes para un desarrollo personal profundo.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="service-card reveal" data-service="ludopatia">
+                    <div class="service-icon"><i class="fa-solid fa-dice"></i></div>
+                    <h3>Ludopatía</h3>
+                    <p class="service-short">Tratamiento especializado para la adicción al juego, abordando sus causas emocionales profundas.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="service-card reveal" data-service="ansiedad">
+                    <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Ansiedad</h3>
+                    <p class="service-short">Técnicas efectivas para comprender y gestionar la ansiedad en el día a día.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+                <div class="service-card reveal" data-service="estres">
+                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Estrés</h3>
+                    <p class="service-short">Abordaje integral del estrés crónico con herramientas de regulación emocional y autocuidado.</p>
+                    <span class="card-link">Ver más →</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== MODAL SERVICIOS ======================== -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose" aria-label="Cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-icon" id="modalIcon"></div>
+            <h3 id="modalTitle"></h3>
+            <div class="modal-desc" id="modalDesc"></div>
+            <a href="https://wa.me/59898325779" target="_blank" rel="noopener noreferrer" class="btn-primary modal-cta" id="modalCTA">Consultar</a>
+        </div>
+    </div>
+
+    <!-- ======================== NOSOTROS ======================== -->
+    <section class="section section-alt" id="nosotros">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Nosotros</h2>
+                <p>Conocé al profesional detrás de cada sesión</p>
+            </div>
+            <div class="about-content reveal">
+                <div class="about-photo-wrap">
+                    <img src="img/marcos (2).png" alt="Lic. Marcos Martínez" class="about-photo">
+                </div>
+                <div class="about-info">
+                    <h3 class="about-name">Lic. en Psicología – Marcos Martínez</h3>
+                    <p class="about-bio">
+                        En mi práctica como psicólogo, muchas veces me preguntan cómo funciona la terapia y qué pueden esperar los pacientes en su primera sesión.
+                    </p>
+                    <p class="about-bio about-bio--second">
+                        En resumen, la terapia es un proceso colaborativo que puede ayudar a las personas a superar sus problemas emocionales y mejorar su bienestar general. En la primera sesión, el terapeuta trabajará para entender los antecedentes y las preocupaciones actuales del paciente, y desarrollará un plan de tratamiento para ayudarlo a alcanzar sus objetivos.
+                    </p>
+                    <p class="about-bio about-bio--second">
+                        Si tienes ganas de comenzar, no dudes en contactarme para programar tu primera sesión.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CONTACTO ======================== -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Contacto</h2>
+                <p>Estamos en el corazón de Montevideo, esperándote</p>
+            </div>
+
+            <div class="contact-grid reveal">
+
+                <a href="tel:59898325779" class="contact-card phone">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Llamadas</span>
+                        <span class="contact-value">098 325 779</span>
+                    </div>
+                    <span class="contact-btn">Llamar</span>
+                </a>
+
+                <a href="https://wa.me/59898325779" target="_blank" rel="noopener noreferrer" class="contact-card whatsapp">
+                    <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="contact-value">098 325 779</span>
+                    </div>
+                    <span class="contact-btn">Escribir</span>
+                </a>
+
+                <a href="https://www.instagram.com/lic.marcosmartinez/" target="_blank" rel="noopener noreferrer" class="contact-card instagram">
+                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Instagram</span>
+                        <span class="contact-value">@lic.marcosmartinez</span>
+                    </div>
+                    <span class="contact-btn">Seguir</span>
+                </a>
+
+                <a href="https://www.facebook.com/PsicologoMarcosMartinez/" target="_blank" rel="noopener noreferrer" class="contact-card facebook">
+                    <div class="contact-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Facebook</span>
+                        <span class="contact-value">PsicologoMarcosMartinez</span>
+                    </div>
+                    <span class="contact-btn">Seguir</span>
+                </a>
+
+                <div class="contact-card address">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="contact-text">
+                        <span class="contact-label">Dirección</span>
+                        <span class="contact-value">Piedras 285 Bis<br>11000 Montevideo</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- HORARIOS -->
+            <div class="schedule-bar reveal">
+                <div class="schedule-bar-title">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Horarios de atención</span>
+                </div>
+                <div class="schedule-days">
+                    <div class="schedule-day">
+                        <span class="sday-name">Lunes</span>
+                        <span class="sday-hours">9:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Martes</span>
+                        <span class="sday-hours">9:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Miércoles</span>
+                        <span class="sday-hours">9:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Jueves</span>
+                        <span class="sday-hours">9:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Viernes</span>
+                        <span class="sday-hours">9:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sday-name">Sábado</span>
+                        <span class="sday-hours">9:00 — 19:00</span>
+                    </div>
+                    <div class="schedule-day schedule-day--closed">
+                        <span class="sday-name">Domingo</span>
+                        <span class="sday-hours">Cerrado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MAPA -->
+            <div class="map-wrap reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.338!2d-56.2106494!3d-34.9056042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f7f02706d82ad:0x1144fa7edabacd3!2sPsic%C3%B3logo%20Marcos%20Mart%C3%ADnez!5e0!3m2!1ses!2suy!4v1711999999999"
+                    width="100%"
+                    height="360"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Psicólogo Marcos Martínez en Google Maps">
+                </iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="Psicólogo Marcos Martínez Logo" class="footer-logo">
+                <span class="footer-name">Psicólogo Marcos Martínez</span>
+                <span class="footer-slogan">Supera el miedo y descubre los beneficios de la terapia.</span>
+            </div>
+            <nav class="footer-nav" aria-label="Navegación del footer">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- ======================== WHATSAPP FAB ======================== -->
+    <a href="https://wa.me/59898325779" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
