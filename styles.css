@@ -215,61 +215,61 @@ ul {
 
 /* ======================== HERO ======================== */
 .hero {
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: calc(var(--nav-height) + 48px) 5vw 64px;
-    gap: 56px;
-    max-width: 1280px;
-    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 10, 35, 0.55);
+    z-index: 1;
 }
 
 .hero-content {
-    flex: 1 1 50%;
-    max-width: 580px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 720px;
 }
 
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(2.4rem, 5vw, 4rem);
     font-weight: 400;
-    color: var(--black);
+    color: #ffffff;
     line-height: 1.18;
     margin-bottom: 20px;
     letter-spacing: -0.01em;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 
 .hero h1 span {
-    color: var(--secondary);
+    color: var(--primary);
     font-style: italic;
 }
 
 .hero-slogan {
     font-size: clamp(1.05rem, 2vw, 1.2rem);
-    color: var(--text-light);
+    color: rgba(255, 255, 255, 0.88);
     font-weight: 300;
     margin-bottom: 36px;
     line-height: 1.65;
-}
-
-.hero-image {
-    flex: 1 1 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 24px;
-    animation: float 5s ease-in-out infinite;
-    box-shadow: 0 20px 56px rgba(128,100,182,0.15);
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-14px); }
+    text-shadow: 0 1px 8px rgba(0,0,0,0.35);
 }
 
 /* ======================== SERVICIOS ======================== */
@@ -696,9 +696,12 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 
 /* ======================== FOOTER ======================== */
 .footer {
-    background: var(--black);
-    color: rgba(255,255,255,0.75);
+    background: rgba(128, 100, 182, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: rgba(255,255,255,0.85);
     padding: 52px 5vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .footer-inner {
@@ -730,13 +733,13 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.05rem;
     font-weight: 500;
-    color: rgba(255,255,255,0.9);
+    color: #ffffff;
     letter-spacing: 0.02em;
 }
 
 .footer-slogan {
     font-size: 0.83rem;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.72);
     line-height: 1.5;
     font-style: italic;
 }
@@ -750,13 +753,13 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 
 .footer-nav a {
     font-size: 0.9rem;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.8);
     transition: color var(--transition);
     letter-spacing: 0.03em;
 }
 
 .footer-nav a:hover {
-    color: var(--primary);
+    color: #ffffff;
 }
 
 /* ======================== WHATSAPP FAB ======================== */
@@ -797,21 +800,8 @@ a.contact-card.instagram:hover .contact-btn { background: #C13584; color: #fff; 
 /* ---- 960px ---- */
 @media (max-width: 960px) {
     .hero {
-        flex-direction: column;
-        text-align: center;
         padding-top: calc(var(--nav-height) + 40px);
-        gap: 40px;
-        min-height: auto;
-        padding-bottom: 60px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-image img {
-        max-width: 380px;
-        margin: 0 auto;
+        min-height: 100svh;
     }
 
     .about-content {
